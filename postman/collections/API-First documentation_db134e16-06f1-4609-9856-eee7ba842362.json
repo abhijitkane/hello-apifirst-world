@@ -1,0 +1,95 @@
+{
+    "info": {
+        "_postman_id": "600c918d-6b1f-430a-905f-ec28d9114f1f",
+        "name": "API-First documentation",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Greet the user",
+            "id": "578c723d-c06f-44a0-8b40-3fe898500f8d",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{baseUrl}}/greeting",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "greeting"
+                    ]
+                },
+                "description": "Greets the user calling the API with a simple message"
+            },
+            "response": [
+                {
+                    "id": "99d9c6f3-9914-456e-b82c-11fc2401df8a",
+                    "name": "A basic greeting",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/greeting",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "greeting"
+                            ]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "{\n \"message\": \"Welcome to the API-first world!\"\n}"
+                },
+                {
+                    "id": "24e02b89-3691-4409-bde1-e380a7d8fb93",
+                    "name": "Unexpected error",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/greeting",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "greeting"
+                            ]
+                        }
+                    },
+                    "status": "Internal Server Error",
+                    "code": 500,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "{\n \"message\": \"anim non ad\"\n}"
+                }
+            ]
+        }
+    ],
+    "variable": [
+        {
+            "id": "cfbc5977-e07c-4ada-9bef-e0dc05bc131f",
+            "key": "baseUrl",
+            "value": "localhost:3000",
+            "type": "string"
+        }
+    ]
+}
