@@ -17,7 +17,7 @@ module.exports = {
     // throw new Error('<Error message>'); // this will result in a 500
 
     var data = {
-        "message": "<string>",
+        "message": "Welcome to the API-first world!",
       },
       status = '200';
 
