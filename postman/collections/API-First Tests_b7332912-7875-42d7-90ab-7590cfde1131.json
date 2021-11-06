@@ -1,0 +1,69 @@
+{
+    "info": {
+        "_postman_id": "f7b2429b-42ee-4b2f-8536-8663bc9a3cf0",
+        "name": "API-First Tests",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Did you greet the user?",
+            "event": [
+                {
+                    "listen": "test",
+                    "script": {
+                        "id": "43423897-f819-421f-b1fd-9c2b9c63df8c",
+                        "exec": [
+                            "pm.test(\"Status code is 200\", function () {",
+                            "    pm.response.to.have.status(200);",
+                            "});",
+                            "",
+                            "pm.test(\"Response time is less than 500ms\", function () {",
+                            "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                            "});",
+                            "",
+                            "pm.test(\"The user is greeted properly\", function () {",
+                            "    var jsonData = pm.response.json();",
+                            "    pm.expect(jsonData.message).to.eql(\"Welcome to the API-first world!\");",
+                            "});",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        "type": "text/javascript"
+                    }
+                }
+            ],
+            "id": "7f7618be-7b6e-44c6-ba1c-43b03c9546df",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{baseUrl}}/greeting",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "greeting"
+                    ]
+                },
+                "description": "Greets the user calling the API with a simple message"
+            },
+            "response": []
+        }
+    ],
+    "variable": [
+        {
+            "id": "cfbc5977-e07c-4ada-9bef-e0dc05bc131f",
+            "key": "baseUrl",
+            "value": "localhost:3000",
+            "type": "string"
+        }
+    ]
+}

@@ -82,6 +82,84 @@
                     "body": "{\n \"message\": \"anim non ad\"\n}"
                 }
             ]
+        },
+        {
+            "name": "Greet the user Copy",
+            "id": "49e8cfc2-7fdc-4b83-945d-e5de1c1053f6",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{baseUrl}}/greeting",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "greeting"
+                    ]
+                },
+                "description": "Greets the user calling the API with a simple message"
+            },
+            "response": [
+                {
+                    "id": "7b945342-4284-4081-aaf5-224617f19bb0",
+                    "name": "A basic greeting",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/greeting",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "greeting"
+                            ]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "{\n \"message\": \"Welcome to the API-first world!\"\n}"
+                },
+                {
+                    "id": "da7847ce-b8fe-4275-83ea-3d4d69afeb94",
+                    "name": "Unexpected error",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/greeting",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "greeting"
+                            ]
+                        }
+                    },
+                    "status": "Internal Server Error",
+                    "code": 500,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "{\n \"message\": \"anim non ad\"\n}"
+                }
+            ]
         }
     ],
     "variable": [
