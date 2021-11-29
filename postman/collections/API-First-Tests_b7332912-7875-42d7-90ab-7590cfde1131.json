@@ -1,6 +1,6 @@
 {
     "info": {
-        "_postman_id": "f7b2429b-42ee-4b2f-8536-8663bc9a3cf0",
+        "_postman_id": "9591ef87-a84a-42aa-9b89-f9336dbb93e3",
         "name": "API-First Tests",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
     },
@@ -11,14 +11,13 @@
                 {
                     "listen": "test",
                     "script": {
-                        "id": "43423897-f819-421f-b1fd-9c2b9c63df8c",
                         "exec": [
                             "pm.test(\"Status code is 200\", function () {",
                             "    pm.response.to.have.status(200);",
                             "});",
                             "",
                             "pm.test(\"Response time is less than 500ms\", function () {",
-                            "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                            "    pm.expect(pm.response.responseTime).to.be.below(500);",
                             "});",
                             "",
                             "pm.test(\"The user is greeted properly\", function () {",
@@ -37,7 +36,6 @@
                     }
                 }
             ],
-            "id": "7f7618be-7b6e-44c6-ba1c-43b03c9546df",
             "protocolProfileBehavior": {
                 "disableBodyPruning": true
             },
@@ -60,7 +58,6 @@
     ],
     "variable": [
         {
-            "id": "cfbc5977-e07c-4ada-9bef-e0dc05bc131f",
             "key": "baseUrl",
             "value": "localhost:3000",
             "type": "string"
