@@ -1,6 +1,6 @@
 {
     "info": {
-        "_postman_id": "9591ef87-a84a-42aa-9b89-f9336dbb93e3",
+        "_postman_id": "2a63fe51-3aae-4e1f-a6ab-bc63c37227f7",
         "name": "API-First Tests",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
     },
@@ -16,8 +16,8 @@
                             "    pm.response.to.have.status(200);",
                             "});",
                             "",
-                            "pm.test(\"Response time is less than 500ms\", function () {",
-                            "    pm.expect(pm.response.responseTime).to.be.below(500);",
+                            "pm.test(\"Response time is less than 100ms\", function () {",
+                            "    pm.expect(pm.response.responseTime).to.be.below(100);",
                             "});",
                             "",
                             "pm.test(\"The user is greeted properly\", function () {",
